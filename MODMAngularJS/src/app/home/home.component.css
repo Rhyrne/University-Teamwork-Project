@@ -1,0 +1,120 @@
+/* Navbar Styles */
+.navbar {
+  background-color: #FFCC00; /* Sarı renk */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.navbar .logo a {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #0033A0; /* Mavi renk */
+}
+
+/* Main Section Styles */
+.home-container {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-section {
+  background-color: #FFCC00; /* Sarı renk */
+  color: #0033A0; /* Mavi yazı */
+  padding: 50px 20px;
+}
+
+.hero-section h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-section p {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background-color: #0033A0; /* Mavi renk */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.cta-button:hover {
+  background-color: #CE1126; /* Kırmızı renk */
+  color: white;
+}
+
+.features-section {
+  padding: 50px 20px;
+  background-color: #F9F9F9;
+}
+
+.features-section h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+}
+
+.feature {
+  width: 22%;
+  background-color: #FFCC00; /* Sarı renk */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #0033A0; /* Mavi renk */
+}
+
+.feature p {
+  font-size: 16px;
+  color: #CE1126; /* Kırmızı renk */
+}
+
+.footer-section {
+  background-color: #0033A0; /* Mavi renk */
+  color: white;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.footer-section p {
+  margin: 0;
+}
