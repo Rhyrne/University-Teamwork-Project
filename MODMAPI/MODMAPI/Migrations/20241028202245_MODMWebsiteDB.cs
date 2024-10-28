@@ -34,6 +34,7 @@ namespace MODMAPI.Migrations
                     Surname = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CCNumber = table.Column<int>(type: "int", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     RoleId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>

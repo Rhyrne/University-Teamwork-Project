@@ -12,6 +12,8 @@ namespace MODMAPI.Models
         public string Surname { get; set; }
         public int CCNumber { get; set; }
         public string Email { get; set; }
+        public string Password { get; set; }
+
         [ForeignKey(nameof(Role))]
         public int RoleId { get; set; }
         #endregion

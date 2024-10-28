@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MODMAPI.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241020135001_MODMWebsiteDB")]
+    [Migration("20241028202245_MODMWebsiteDB")]
     partial class MODMWebsiteDB
     {
         /// <inheritdoc />
@@ -172,6 +172,10 @@ namespace MODMAPI.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
