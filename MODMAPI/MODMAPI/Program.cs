@@ -1,15 +1,22 @@
 using Microsoft.EntityFrameworkCore;
 using MODMAPI.Data;
+using MODMAPI.Mapping;
+using MODMAPI.Repositories.Implementations;
+using MODMAPI.Repositories.Interfaces;
+using MODMAPI.Services.Implementations;
+using MODMAPI.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddDbContext<AppDbContext>(db => db.UseSqlServer(builder.Configuration.GetConnectionString("DbConnection")));
 builder.Services.AddSwaggerGen();
+builder.Services.AddAutoMapper(typeof(MappingProfile));
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 var app = builder.Build();
 

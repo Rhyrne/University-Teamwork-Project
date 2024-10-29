@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using MODMAPI.DTOs;
+using MODMAPI.Models;
 
 namespace MODMAPI.Mapping
 {
@@ -6,7 +8,8 @@ namespace MODMAPI.Mapping
     {
         public MappingProfile() 
         {
-
+            CreateMap<User,UserDTO>();
+            CreateMap<UserDTO,User>();
         }
     }
 }
