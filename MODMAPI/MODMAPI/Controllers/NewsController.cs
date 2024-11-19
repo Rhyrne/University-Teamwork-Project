@@ -38,5 +38,15 @@ namespace MODMAPI.Controllers
 
             return Ok(news);
         }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteNewsById(int id)
+        {
+            var deletedNews = await _newsService.DeleteNewsAsync(id);
+
+            if (!deletedNews) return NotFound();
+
+            return NoContent();
+        }
     }
 }
