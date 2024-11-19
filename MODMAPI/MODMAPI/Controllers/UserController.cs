@@ -26,6 +26,7 @@ namespace MODMAPI.Controllers
         public async Task<IActionResult> GetUserById(int id)
         {
             var User = await _userService.GetUserByIdAsync(id);
+
             if(User == null) return NotFound();
 
             return Ok(User);
@@ -51,7 +52,8 @@ namespace MODMAPI.Controllers
         public async Task<IActionResult> DeleteUserById(int id)
         {
             var deletedUser = await _userService.DeleteUserAsync(id);
-            if(!deletedUser)return NotFound();
+
+            if (!deletedUser) return NotFound();
 
             return NoContent();
         }

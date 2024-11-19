@@ -6,7 +6,7 @@ namespace MODMAPI.Repositories.Interfaces
     {
         Task<IEnumerable<New>> GetAllNewsAsync();
         Task<New> CreateNewsAsync(New news);
-        Task<bool> DeleteUserAsync(int id);
+        Task<bool> DeleteNewsAsync(int id);
         Task<New> GetNewsByIdAsync(int id);
     }
 }

@@ -12,7 +12,7 @@ namespace MODMAPI.Services.Implementations
 
         public NewsService(INewsRepository newsRepository)
         {
-            _newsRepository = newsRepository;
+            this._newsRepository = newsRepository;
         }
 
         public async Task<IEnumerable<NewsDTO>> GetAllNewsAsync()
@@ -44,9 +44,9 @@ namespace MODMAPI.Services.Implementations
             return newsDTO;
         }
 
-        public async Task<bool> DeleteUserAsync(int id)
+        public async Task<bool> DeleteNewsAsync(int id)
         {
-            return await _newsRepository.DeleteUserAsync(id);
+            return await _newsRepository.DeleteNewsAsync(id);
         }
 
         public async Task<NewsDTO> GetNewsByIdAsync(int id)

@@ -11,7 +11,7 @@ namespace MODMAPI.Services.Implementations
 
         public RoleService(IRoleRepository roleRepository)
         {
-            _roleRepository = roleRepository;
+            this._roleRepository = roleRepository;
         }
 
         public async Task<IEnumerable<RoleDTO>> GetAllRolesAsync()

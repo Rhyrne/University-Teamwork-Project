@@ -12,7 +12,7 @@ namespace MODMAPI.Services.Implementations
 
         public UserService(IUserRepository userRepository)
         {
-            _userRepository = userRepository;
+            this._userRepository = userRepository;
         }
 
         public async Task<UserDTO> CreateUserAsync(UserDTO userDTO)

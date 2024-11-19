@@ -7,7 +7,7 @@ namespace MODMAPI.Services.Interfaces
     {
         Task<IEnumerable<NewsDTO>> GetAllNewsAsync();
         Task<NewsDTO> CreateNewsAsync(NewsDTO news);
-        Task<bool> DeleteUserAsync(int id);
+        Task<bool> DeleteNewsAsync(int id);
         Task<NewsDTO> GetNewsByIdAsync(int id);
     }
 }

@@ -13,13 +13,15 @@ namespace MODMAPI.Repositories.Implementations
         {
             _context = context;
         }
+
         public async Task<New> CreateNewsAsync(New news)
         {
             _context.News.Add(news);
             await _context.SaveChangesAsync();
             return news;
         }
-        public async Task<bool> DeleteUserAsync(int id)
+
+        public async Task<bool> DeleteNewsAsync(int id)
         {
             var news = await _context.News.FindAsync(id);
             if (news == null) return false;
