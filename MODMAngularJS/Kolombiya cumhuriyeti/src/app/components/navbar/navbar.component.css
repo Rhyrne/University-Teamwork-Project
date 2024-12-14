@@ -1,0 +1,46 @@
+/* Navbar Menüsü için Stil */
+.navbar-nav .nav-item {
+    display: inline-block; /* Her menü öğesini kutucuk şeklinde yan yana hizala */
+  }
+  
+  .navbar-nav .nav-link {
+    background-color: #0047ab; /* Kolombiya bayrağına uygun mavi ton */
+    color: white; /* Beyaz yazı */
+    padding: 10px 20px; /* Kutucukların iç boşluğu */
+    margin: 5px; /* Her kutucuk arasında boşluk */
+    border-radius: 8px; /* Köşeleri yuvarlat */
+    text-align: center;
+    text-transform: uppercase; /* Büyük harflerle görünmesi için */
+    font-weight: bold;
+    display: inline-block;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    background-color: #ffcc00; /* Hover sırasında arka planı sarı yap */
+    color: #333; /* Yazı rengini koyu yap */
+    transition: background-color 0.3s ease; /* Yumuşak geçiş efekti */
+  }
+  
+  /* Profile Button için Stil */
+  .btn-profile {
+    background-color: #d52b1e; /* Kolombiya kırmızı tonu */
+    color: white; /* Beyaz yazı ve simge */
+    border: none; /* Sınır yok */
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .btn-profile i {
+    font-size: 24px; /* Simge boyutunu büyüt */
+    margin-right: 8px; /* Simge ile metin arasındaki boşluk */
+  }
+  
+  .btn-profile:hover {
+    background-color: #ff6347; /* Hover (üzerine gelindiğinde) daha açık kırmızı */
+    transition: background-color 0.3s ease;
+  }
+  

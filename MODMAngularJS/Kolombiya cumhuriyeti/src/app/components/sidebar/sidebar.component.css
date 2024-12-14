@@ -1,0 +1,108 @@
+/* Ana sayfa düzeni */
+body {
+    background-color: #fff; /* Beyaz arka plan */
+    font-family: Arial, sans-serif;
+}
+
+/* Sidebar Arka Plan Rengi (Mavi) */
+.sidebar-wrapper {
+    background-color: #0047ab; /* Kolombiya bayrağının mavi tonu */
+    padding: 15px;
+    color: white; /* Yazılar beyaz olacak */
+}
+
+/* Logo Bölgesi (Sarı) */
+.logo {
+    background-color: #ffcc00; /* Kolombiya bayrağının sarı tonu */
+    padding: 20px;
+    text-align: center;
+    color: black; /* Sarı arka plan üzerinde siyah yazı rengi */
+}
+
+/* Logo Düzenlemesi */
+.logo-img {
+    text-align: center;
+    margin-top: 50px; /* Yukarıdan daha fazla boşluk ekle */
+    padding: 10px; /* Logonun çevresine boşluk ekle */
+  }
+  
+  .logo-img img {
+    max-width: 100%;
+    max-height: 100px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* Menü Arasındaki Boşluk */
+  .sidebar-wrapper .nav .nav-item .nav-link {
+    background-color: #d52b1e;  /* Kolombiya kırmızı tonu */
+    color: white;
+    border-radius: 8px;
+    margin: 15px 0;  /* Menü öğeleri arasında daha fazla boşluk */
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: auto;
+  }
+  
+  .sidebar-wrapper .nav .nav-item .nav-link i {
+    margin-right: 10px;  /* Simge ile metin arasındaki boşluk */
+  }
+  
+  .sidebar-wrapper .nav .nav-item .nav-link:hover {
+    background-color: #ff6347;  /* Hover durumunda daha açık kırmızı */
+  }
+  
+  /* Menü Öğeleri Arasında Daha Fazla Boşluk */
+  .sidebar-wrapper .nav {
+    margin-top: 20px;  /* Menü öğelerinin üst kısmına boşluk ekle */
+  }
+  
+
+/* Menü Öğeleri (Kırmızı Aktif Renk) */
+.nav-item {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: white; /* Normal menü öğeleri beyaz yazı */
+    display: flex;
+    align-items: center;
+}
+
+.nav-item a.active {
+    background-color: #d52b1e; /* Kolombiya bayrağının kırmızı tonu (aktif menü öğesi) */
+    border-radius: 5px;
+}
+
+.nav-item a:hover {
+    background-color: #ff6347; /* Hover durumu için açık kırmızı tonu */
+    border-radius: 5px;
+}
+
+/* Arama Çubuğu (Kırmızı Sınır ve Sarı İç Alan) */
+.input-group .form-control {
+    background-color: #ffcc00; /* Sarı arama çubuğu iç alanı */
+    border: 2px solid #d52b1e; /* Kırmızı sınır */
+    color: black;
+}
+
+.btn-just-icon {
+    background-color: #d52b1e; /* Kırmızı buton */
+    color: white;
+}
+
+.notification {
+    background-color: #ffcc00; /* Sarı bildirim balonu */
+    color: black;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 10px;
+    position: relative;
+    top: -10px;
+    right: 10px;
+}
