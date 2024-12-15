@@ -2,7 +2,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
+import { RouterModule,Routes } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 import { AppComponent } from './app.component';
@@ -13,8 +13,18 @@ import { BusinessesComponent } from './businesses/businesses.component';
 import { JobsComponent } from './jobs/jobs.component';
 import { TravelGuideComponent } from './travel-guide/travel-guide.component';
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 
+const routes: Routes = [
+  { path: 'login', component: LoginComponent },
+  {path: 'register',component: RegisterComponent},
+  {path : 'home',component: HomeComponent},
+  {path:'news',component: NewsComponent },
+  {path: 'jobs',component: JobsComponent},
+  {path: 'businesses',component: BusinessesComponent},
+  {path: 'travel-guide',component : TravelGuideComponent },
+];
 @NgModule({
   imports: [
     BrowserAnimationsModule,
@@ -22,7 +32,7 @@ import { LoginComponent } from './login/login.component';
     ReactiveFormsModule,
     HttpClientModule,
     ComponentsModule,
-    RouterModule,
+    RouterModule.forRoot(routes),
     AppRoutingModule,
   ],
   declarations: [
@@ -34,6 +44,7 @@ import { LoginComponent } from './login/login.component';
     JobsComponent,
     TravelGuideComponent,
     LoginComponent,
+    RegisterComponent,
 
   ],
   providers: [],
