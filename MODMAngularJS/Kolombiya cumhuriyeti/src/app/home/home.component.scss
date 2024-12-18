@@ -1,0 +1,19 @@
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #ffcc00, #003366);
+    color: white;
+    padding: 50px 20px;
+  }
+  
+  .hero img {
+    width: 50%;
+    border-radius: 10px;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    margin: 0 0 10px;
+  }
+  
