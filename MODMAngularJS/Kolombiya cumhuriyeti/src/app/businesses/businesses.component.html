@@ -1,1 +1,36 @@
-<p>businesses works!</p>
+<div class="business-container">
+    <h1>İşletmeler</h1>
+  
+    <!-- Yeni İşletme Ekle -->
+    <div class="add-business-form">
+      <h2>Yeni İşletme Ekle</h2>
+      <form (ngSubmit)="addBusiness()">
+        <label for="businessName">İşletme Adı:</label>
+        <input type="text" id="businessName" [(ngModel)]="newBusiness.businessName" name="businessName" required />
+  
+        <label for="businessType">İşletme Türü:</label>
+        <input type="text" id="businessType" [(ngModel)]="newBusiness.businessType" name="businessType" required />
+  
+        <label for="releaseTime">Yayın Tarihi:</label>
+        <input type="datetime-local" id="releaseTime" [(ngModel)]="newBusiness.releaseTime" name="releaseTime" required />
+  
+        <label for="userId">Kullanıcı ID:</label>
+        <input type="number" id="userId" [(ngModel)]="newBusiness.userId" name="userId" required />
+  
+        <button type="submit">Ekle</button>
+      </form>
+    </div>
+  
+    <!-- İşletme Listesi -->
+    <div class="business-list">
+      <h2>İşletme Listesi</h2>
+      <div *ngFor="let business of businessList">
+        <h3>{{ business.businessName }}</h3>
+        <p><strong>Tür:</strong> {{ business.businessType }}</p>
+        <p><strong>Yayın Tarihi:</strong> {{ business.releaseTime }}</p>
+        <p><strong>Kullanıcı ID:</strong> {{ business.userId }}</p>
+        <button (click)="deleteBusiness(business.businessId)">Sil</button>
+      </div>
+    </div>
+  </div>
+  

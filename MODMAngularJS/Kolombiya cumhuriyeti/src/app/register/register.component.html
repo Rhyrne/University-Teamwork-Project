@@ -39,11 +39,7 @@
         name="ccnumber"
         [(ngModel)]="registerData.ccnumber"
         required
-        pattern="^[0-9]{8,12}$"
       />
-    </div>
-    <div *ngIf="registerForm.controls.ccnumber?.invalid && registerForm.controls.ccnumber?.touched">
-      <small>Identity Card Number must be 8-12 digits.</small>
     </div>
     
     
