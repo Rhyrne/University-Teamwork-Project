@@ -12,6 +12,42 @@
       />
     </div>
     <div>
+      <label for="name">Name</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        [(ngModel)]="registerData.name"
+        required
+      />
+    </div>
+    <div>
+      <label for="surname">Surname</label>
+      <input
+        type="text"
+        id="surname"
+        name="surname"
+        [(ngModel)]="registerData.surname"
+        required
+      />
+    </div>
+    <div>
+      <label for="ccnumber">Colombian Identification Number</label>
+      <input
+        type="text"
+        id="ccnumber"
+        name="ccnumber"
+        [(ngModel)]="registerData.ccnumber"
+        required
+        pattern="^[0-9]{8,12}$"
+      />
+    </div>
+    <div *ngIf="registerForm.controls.ccnumber?.invalid && registerForm.controls.ccnumber?.touched">
+      <small>Identity Card Number must be 8-12 digits.</small>
+    </div>
+    
+    
+    <div>
       <label for="email">Email</label>
       <input
         type="email"

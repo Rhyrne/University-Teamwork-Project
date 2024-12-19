@@ -10,7 +10,7 @@ export class ApiService {
 
   private baseUrl = 'http://example.com/api';
 
-  register(data: { username: string; email: string; password: string }): Observable<any> {
+  register(data: { username: string; name : string; surname:string; ccnumber:string; email: string; password: string }): Observable<any> {
     return this.http.post(`${this.baseUrl}/register`, data);}
 
   login(data: { username: string; password: string }): Observable<any> {
