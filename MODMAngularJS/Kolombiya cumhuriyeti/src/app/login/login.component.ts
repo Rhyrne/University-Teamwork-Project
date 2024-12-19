@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ApiService } from 'app/services/api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,23 +9,27 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  loginForm: FormGroup; // loginForm burada tanımlanıyor
+  loginData = {
+    username: '',
+    password: ''
+  };
+ 
 
-  constructor(private fb: FormBuilder) {
-    // Form yapısını oluşturuyoruz
-    this.loginForm = this.fb.group({
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]]
-    });
+  constructor(private services: ApiService, private router: Router) {
+    
   }
 
   // Form gönderimi için kullanılan onSubmit metodu
   onSubmit() {
-    if (this.loginForm.valid) {
-      console.log('Form Data:', this.loginForm.value);
-      alert('Login successful!');
-    } else {
-      alert('Form is invalid. Please fix the errors and try again.');
-    }
+    this.services.login(this.loginData).subscribe(
+      (response) => {
+        console.log('Login successful', response);
+        localStorage.setItem('token', response.token); // JWT token'ı saklama
+        this.router.navigate(['/dashboard']); // Başarılı girişten sonra yönlendirme
+      },
+      (error) => {
+        console.error('Login failed', error);
+      }
+    );
   }
 }

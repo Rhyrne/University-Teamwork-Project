@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+  }
+  
+  .places {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    width: 100%; /* Tam genişlik */
+  }
+  
+  .places-list {
+    display: flex;
+    justify-content: space-around; /* Kartları yaymak için */
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .place-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    width: 25%; /* Kart genişliği */
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer; /* Seçilebilir olduğunu göstermek için */
+    transition: transform 0.2s;
+  }
+  
+  .place-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .place-card h2 {
+    margin-bottom: 10px;
+  }
+  
+  .place-card img {
+    width: 100%; /* Kart genişliğiyle aynı */
+    height: 200px; /* Sabit bir yükseklik belirlenir */
+    object-fit: cover; /* Resim oranını koruyarak kesme yapılır */
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  .selected-place {
+    max-width: 1200px; /* Sayfa genişliğini sınırla */
+    margin: 0 auto; /* Ortala */
+    padding: 20px;
+  }
+  .images {
+    display: flex;
+    flex-direction: column; /* Resimleri alt alta diz */
+    gap: 20px; /* Resimler arasındaki boşluğu artır */
+  }
+  
+  .selected-place img {
+    width: 100%; /* Bulunduğu konteynerin tamamını kapla */
+    height: 300px; /* Daha geniş görünmesi için sabit yükseklik */
+    object-fit: cover; /* Resmi, alanı kaplayacak şekilde ölçeklendir */
+    margin-bottom: 10px;
+    border-radius: 8px; /* Hafif köşe yuvarlatma */
+  }
+  img {
+    image-rendering: auto; /* Varsayılan tarayıcı işleme */
+    image-rendering: crisp-edges; /* Keskin köşeler için */
+    image-rendering: high-quality; /* Kaliteyi artırır (tarayıcı desteğine bağlı) */
+  }
+  

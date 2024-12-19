@@ -7,6 +7,16 @@ import * as Chartist from 'chartist';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  
+  totalUsers = 1200;
+  totalEvents = 35;
+  totalRevenue = 25000;
+
+  recentActivities = [
+    'Kullanıcı X yeni bir kayıt yaptı.',
+    'Ürün Y stoklara eklendi.',
+    'Kullanıcı Z hesabını güncelledi.'
+  ];
 
   constructor() { }
   startAnimationForLineChart(chart){

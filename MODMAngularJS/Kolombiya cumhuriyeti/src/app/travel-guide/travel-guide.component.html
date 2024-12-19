@@ -1,1 +1,26 @@
-<p>travel-guide works!</p>
+<section class="places">
+    <h1>Kolombiya'nın Gezilecek Yerleri</h1>
+  
+    <!-- Şehir seçilmemişse kartları göster -->
+    <div *ngIf="!selectedPlace" class="places-list">
+      <div
+        class="place-card"
+        *ngFor="let place of places"
+        (click)="selectPlace(place)"
+      >
+        <h2>{{ place.name }}</h2>
+        <p>{{ place.description }}</p>
+      </div>
+    </div>
+  
+    <!-- Şehir seçilmişse resimleri göster -->
+    <div *ngIf="selectedPlace" class="selected-place">
+      <h2>{{ selectedPlace.name }}</h2>
+      <p>{{ selectedPlace.description }}</p>
+      <div>
+        <img *ngFor="let image of selectedPlace.images" [src]="image" [alt]="selectedPlace.name" />
+      </div>
+      <button (click)="selectedPlace = null">Geri Dön</button>
+    </div>
+  </section>
+  

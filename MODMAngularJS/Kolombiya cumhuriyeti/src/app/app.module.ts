@@ -14,6 +14,9 @@ import { JobsComponent } from './jobs/jobs.component';
 import { TravelGuideComponent } from './travel-guide/travel-guide.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './services/auth.interceptor';
+
 
 
 const routes: Routes = [
@@ -47,7 +50,9 @@ const routes: Routes = [
     RegisterComponent,
 
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

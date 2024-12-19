@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
-import { HomeComponent } from './home/home.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { AuthGuard } from './guards/auth.guard';
+import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
- { path: 'login', component: LoginComponent }, // Login sayfası
-  { path: 'home', component: HomeComponent },  // Ana sayfa
-  // { path: '', redirectTo: '/login', pathMatch: 'full' }, // Varsayılan rota
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
+  { path: '', redirectTo: '/login', pathMatch: 'full' }
 ];
 
 @NgModule({
