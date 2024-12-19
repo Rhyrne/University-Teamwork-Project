@@ -1,1 +1,36 @@
-<p>jobs works!</p>
+<div class="jobs-container">
+    <h1>İşler</h1>
+  
+    <!-- Yeni İş Ekle -->
+    <div class="add-job-form">
+      <h2>Yeni İş Ekle</h2>
+      <form (ngSubmit)="addJob()">
+        <label for="jobTitle">İş Başlığı:</label>
+        <input type="text" id="jobTitle" [(ngModel)]="newJob.jobTitle" name="jobTitle" required />
+  
+        <label for="jobDescription">Açıklama:</label>
+        <textarea id="jobDescription" [(ngModel)]="newJob.jobDescription" name="jobDescription" required></textarea>
+  
+        <label for="releaseTime">Yayın Tarihi:</label>
+        <input type="datetime-local" id="releaseTime" [(ngModel)]="newJob.releaseTime" name="releaseTime" required />
+  
+        <label for="userId">Kullanıcı ID:</label>
+        <input type="number" id="userId" [(ngModel)]="newJob.userId" name="userId" required />
+  
+        <button type="submit">Ekle</button>
+      </form>
+    </div>
+  
+    <!-- İş Listesi -->
+    <div class="jobs-list">
+      <h2>İş Listesi</h2>
+      <div *ngFor="let job of jobsList">
+        <h3>{{ job.jobTitle }}</h3>
+        <p>{{ job.jobDescription }}</p>
+        <p><strong>Yayın Tarihi:</strong> {{ job.releaseTime }}</p>
+        <p><strong>Kullanıcı ID:</strong> {{ job.userId }}</p>
+        <button (click)="deleteJob(job.jobId)">Sil</button>
+      </div>
+    </div>
+  </div>
+  

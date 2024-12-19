@@ -1,1 +1,36 @@
-<p>news works!</p>
+<div class="news-container">
+    <h1>Haberler</h1>
+  
+    
+    <div class="add-news-form">
+      <h2>Yeni Haber Ekle</h2>
+      <form (ngSubmit)="addNews()">
+        <label for="title">Başlık:</label>
+        <input type="text" id="title" [(ngModel)]="newNews.newsTitle" name="newsTitle" required />
+  
+        <label for="description">Açıklama:</label>
+        <textarea id="description" [(ngModel)]="newNews.newsDescription" name="newsDescription" required></textarea>
+  
+        <label for="releaseTime">Yayın Tarihi:</label>
+        <input type="datetime-local" id="releaseTime" [(ngModel)]="newNews.releaseTime" name="releaseTime" required />
+  
+        <label for="userId">Kullanıcı ID:</label>
+        <input type="number" id="userId" [(ngModel)]="newNews.userId" name="userId" required />
+  
+        <button type="submit">Ekle</button>
+      </form>
+    </div>
+  
+    
+    <div class="news-list">
+      <h2>Haber Listesi</h2>
+      <div *ngFor="let news of newsList">
+        <h3>{{ news.newsTitle }}</h3>
+        <p>{{ news.newsDescription }}</p>
+        <p><strong>Yayın Tarihi:</strong> {{ news.releaseTime }}</p>
+        <p><strong>Kullanıcı ID:</strong> {{ news.userId }}</p>
+        <button (click)="deleteNews(news.newId)">Sil</button>
+      </div>
+    </div>
+  </div>
+  

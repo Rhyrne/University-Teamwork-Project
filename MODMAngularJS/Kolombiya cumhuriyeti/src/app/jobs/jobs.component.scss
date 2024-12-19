@@ -1,0 +1,120 @@
+.jobs-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ffe600;
+  }
+  
+  .jobs-container h1 {
+    text-align: center;
+    color: #0033a0;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  
+  .add-job-form {
+    margin-bottom: 30px;
+  
+    h2 {
+      color: #d52b1e;
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+  
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+  
+      label {
+        font-size: 1rem;
+        font-weight: bold;
+        color: #555;
+      }
+  
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1rem;
+  
+        &:focus {
+          border-color: #0033a0;
+          outline: none;
+        }
+      }
+  
+      button {
+        background-color: #0033a0;
+        color: #ffffff;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        text-transform: uppercase;
+  
+        &:hover {
+          background-color: #00257a;
+        }
+      }
+    }
+  }
+  
+  .jobs-list {
+    margin-top: 30px;
+  
+    h2 {
+      color: #0033a0;
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+  
+    div {
+      border: 1px solid #ccc;
+      border-left: 6px solid #d52b1e;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      background-color: #fdfdfd;
+  
+      h3 {
+        color: #0033a0;
+        margin-bottom: 10px;
+        font-size: 1.25rem;
+      }
+  
+      p {
+        font-size: 0.9rem;
+        margin: 5px 0;
+  
+        strong {
+          color: #555;
+        }
+      }
+  
+      button {
+        margin-top: 10px;
+        background-color: #d52b1e;
+        color: #ffffff;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 3px;
+        font-size: 0.9rem;
+        font-weight: bold;
+        cursor: pointer;
+  
+        &:hover {
+          background-color: #a8231a;
+        }
+      }
+    }
+  }
+  
