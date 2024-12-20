@@ -1,119 +1,142 @@
 .business-container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border: 2px solid #ffe600; // Sarı, Kolombiya bayrağından esinlenildi
-  }
-  
-  .business-container h1 {
-    text-align: center;
-    color: #0033a0; // Kolombiya bayrağındaki mavi renk
-    font-size: 2rem;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 3px solid #ffe600; /* Kolombiya bayrağından sarı renk */
+}
+
+.business-container h1 {
+  text-align: center;
+  color: #0033a0; /* Kolombiya bayrağındaki mavi */
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* İşletme Ekleme Formu */
+.add-business-form {
+  margin-bottom: 40px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  border: 2px solid #0033a0; /* Mavi ton */
+
+  h2 {
+    color: #d52b1e; /* Kırmızı renk */
+    font-size: 1.8rem;
     margin-bottom: 20px;
-    text-transform: uppercase;
+    text-align: center;
   }
-  
-  .add-business-form {
-    margin-bottom: 30px;
-  
-    h2 {
-      color: #d52b1e; // Kırmızı renk
-      font-size: 1.5rem;
-      margin-bottom: 15px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    label {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #555;
     }
-  
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-  
-      label {
-        font-size: 1rem;
-        font-weight: bold;
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      resize: none; /* Sadece textarea için */
+      transition: all 0.3s ease;
+
+      &:focus {
+        border-color: #0033a0;
+        outline: none;
+        box-shadow: 0 0 5px rgba(0, 51, 160, 0.5);
+      }
+    }
+
+    button {
+      background-color: #0033a0;
+      color: #ffffff;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #00257a;
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+/* İşletme Listesi */
+.business-list {
+  margin-top: 40px;
+
+  h2 {
+    color: #0033a0;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  div {
+    border: 2px solid #ccc;
+    border-left: 8px solid #d52b1e; /* Kırmızı renk */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    h3 {
+      color: #0033a0;
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+      margin: 5px 0;
+
+      strong {
         color: #555;
       }
-  
-      input {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 1rem;
-  
-        &:focus {
-          border-color: #0033a0;
-          outline: none;
-        }
-      }
-  
-      button {
-        background-color: #0033a0;
-        color: #ffffff;
-        padding: 10px;
-        border: none;
-        border-radius: 5px;
-        font-size: 1rem;
-        font-weight: bold;
-        cursor: pointer;
-        text-transform: uppercase;
-  
-        &:hover {
-          background-color: #00257a;
-        }
+    }
+
+    button {
+      margin-top: 10px;
+      background-color: #d52b1e;
+      color: #ffffff;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #a8231a;
+        transform: scale(1.05);
       }
     }
   }
-  
-  .business-list {
-    margin-top: 30px;
-  
-    h2 {
-      color: #0033a0;
-      font-size: 1.5rem;
-      margin-bottom: 15px;
-    }
-  
-    div {
-      border: 1px solid #ccc;
-      border-left: 6px solid #d52b1e; // Kırmızı renk
-      padding: 15px;
-      margin-bottom: 15px;
-      border-radius: 5px;
-      background-color: #fdfdfd;
-  
-      h3 {
-        color: #0033a0;
-        margin-bottom: 10px;
-        font-size: 1.25rem;
-      }
-  
-      p {
-        font-size: 0.9rem;
-        margin: 5px 0;
-  
-        strong {
-          color: #555;
-        }
-      }
-  
-      button {
-        margin-top: 10px;
-        background-color: #d52b1e;
-        color: #ffffff;
-        padding: 5px 10px;
-        border: none;
-        border-radius: 3px;
-        font-size: 0.9rem;
-        font-weight: bold;
-        cursor: pointer;
-  
-        &:hover {
-          background-color: #a8231a;
-        }
-      }
-    }
-  }
-  
+}

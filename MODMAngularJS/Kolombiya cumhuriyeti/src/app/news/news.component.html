@@ -2,6 +2,17 @@
     <h1>Haberler</h1>
   
     
+    <div class="news-list">
+      <h2>Haber Listesi</h2>
+      <div *ngFor="let news of newsList">
+        <h3>{{ news.newsTitle }}</h3>
+        <p>{{ news.newsDescription }}</p>
+        <p><strong>Yayın Tarihi:</strong> {{ news.releaseTime }}</p>
+        <p><strong>Kullanıcı ID:</strong> {{ news.userId }}</p>
+        <button (click)="deleteNews(news.newId)">Sil</button>
+      </div>
+    </div>
+    
     <div class="add-news-form">
       <h2>Yeni Haber Ekle</h2>
       <form (ngSubmit)="addNews()">
@@ -22,15 +33,6 @@
     </div>
   
     
-    <div class="news-list">
-      <h2>Haber Listesi</h2>
-      <div *ngFor="let news of newsList">
-        <h3>{{ news.newsTitle }}</h3>
-        <p>{{ news.newsDescription }}</p>
-        <p><strong>Yayın Tarihi:</strong> {{ news.releaseTime }}</p>
-        <p><strong>Kullanıcı ID:</strong> {{ news.userId }}</p>
-        <button (click)="deleteNews(news.newId)">Sil</button>
-      </div>
-    </div>
+    
   </div>
   

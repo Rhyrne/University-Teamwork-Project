@@ -1,5 +1,16 @@
 <div class="business-container">
     <h1>İşletmeler</h1>
+   <!-- İşletme Listesi -->
+   <div class="business-list">
+    <h2>İşletme Listesi</h2>
+    <div *ngFor="let business of businessList">
+      <h3>{{ business.businessName }}</h3>
+      <p><strong>Tür:</strong> {{ business.businessType }}</p>
+      <p><strong>Yayın Tarihi:</strong> {{ business.releaseTime }}</p>
+      <p><strong>Kullanıcı ID:</strong> {{ business.userId }}</p>
+      <button (click)="deleteBusiness(business.businessId)">Sil</button>
+    </div>
+  </div>
   
     <!-- Yeni İşletme Ekle -->
     <div class="add-business-form">
@@ -21,16 +32,6 @@
       </form>
     </div>
   
-    <!-- İşletme Listesi -->
-    <div class="business-list">
-      <h2>İşletme Listesi</h2>
-      <div *ngFor="let business of businessList">
-        <h3>{{ business.businessName }}</h3>
-        <p><strong>Tür:</strong> {{ business.businessType }}</p>
-        <p><strong>Yayın Tarihi:</strong> {{ business.releaseTime }}</p>
-        <p><strong>Kullanıcı ID:</strong> {{ business.userId }}</p>
-        <button (click)="deleteBusiness(business.businessId)">Sil</button>
-      </div>
-    </div>
+   
   </div>
   

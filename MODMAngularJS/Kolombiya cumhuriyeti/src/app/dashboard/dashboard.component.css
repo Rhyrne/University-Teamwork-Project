@@ -1,11 +1,12 @@
 .dashboard {
   padding: 20px;
-  background-color: #f4f4f4;
+  background-color: #f4f4f4; /* Nötr zemin */
 }
 
 .dashboard h1 {
   font-size: 2rem;
   margin-bottom: 20px;
+  color: #1c3d72; /* Mavi tonu */
 }
 
 /* Özet Paneller */
@@ -18,16 +19,17 @@
 .summary-cards .card {
   flex: 1;
   padding: 20px;
-  background-color: white;
+  background-color: #ffe600; /* Sarı arka plan */
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
+  border: 2px solid #ce1126; /* Kırmızı kenarlık */
 }
 
 .summary-cards .card h3 {
   margin-bottom: 10px;
   font-size: 1.2rem;
-  color: #555;
+  color: #1c3d72; /* Mavi metin */
 }
 
 /* Grafikler */
@@ -40,30 +42,33 @@
 .charts .chart {
   flex: 1;
   padding: 20px;
-  background-color: white;
+  background-color: #1c3d72; /* Mavi arka plan */
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
+  color: white; /* Beyaz metin */
+  border: 2px solid #ffe600; /* Sarı kenarlık */
 }
 
 .charts .chart h3 {
   margin-bottom: 10px;
   font-size: 1.2rem;
-  color: #555;
+  color: #ffe600; /* Sarı metin */
 }
 
 /* Son İşlemler */
 .recent-activities {
-  background-color: white;
+  background-color: #ce1126; /* Kırmızı arka plan */
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  color: white; /* Beyaz metin */
 }
 
 .recent-activities h3 {
   margin-bottom: 10px;
   font-size: 1.2rem;
-  color: #555;
+  color: #ffe600; /* Sarı başlık */
 }
 
 .recent-activities ul {
@@ -74,5 +79,5 @@
 .recent-activities ul li {
   margin-bottom: 10px;
   font-size: 1rem;
-  color: #666;
+  color: #f4f4f4; /* Daha açık beyaz */
 }
